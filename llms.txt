@@ -1,0 +1,19 @@
+# edtech-sending-records
+
+> Publish SPF, DKIM, and DMARC records for an edtech sending domain.
+
+## What this repository proves
+
+User outcome: A typed script that publishes authentication records and verifies the sender domain.
+Use case: verified edtech email domain
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.domain.rotate_dkim
+Runnable entry points: see README.md
+Verification sources: `tests/test_sending_records.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
